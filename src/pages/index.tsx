@@ -1,5 +1,6 @@
 import { signIn, signOut, useSession } from "next-auth/react";
 import { api } from "~/utils/api";
+import Accordion from "../components/Accordion";
 
 export default function Home() {
   const hello = api.example.hello.useQuery({ text: "from tRPC" });
@@ -13,6 +14,7 @@ export default function Home() {
             <p className="text-2xl ">
               {hello.data ? hello.data.greeting : "Loading tRPC query..."}
             </p>
+            <Accordion title="Tile from Accordion">Hello Kids</Accordion>
             <AuthShowcase />
           </div>
         </div>
