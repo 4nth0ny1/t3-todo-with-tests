@@ -25,7 +25,6 @@ test("getAllTodos retreives todos", async () => {
   
     prismaMock.todo.findMany.mockResolvedValue(mockOutput);
 
-
     const caller = appRouter.createCaller(
         { session: mockSession, prisma: prismaMock }
       );
