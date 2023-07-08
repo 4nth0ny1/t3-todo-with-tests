@@ -4,7 +4,11 @@ type TodoProps = {
   todo: Todo;
 };
 
-export function Todo({ todo }: TodoProps) {
+export default function Todo({ todo }: TodoProps) {
   const { id, content, done } = todo;
-  return <div>{content}</div>;
+  return (
+    <div>
+      <p role="content">{content}</p>
+    </div>
+  );
 }
